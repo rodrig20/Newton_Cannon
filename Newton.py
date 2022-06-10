@@ -55,7 +55,6 @@ def acel(total_f,distancia,x1,x2):
 
     return fx, fy, degrees(ang)
 
-
 chao = alt/2 - planeta - tam
 vi = 10
 ai = 0
