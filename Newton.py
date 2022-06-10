@@ -19,7 +19,6 @@ font = pygame.font.SysFont(None,30)
 background = pygame.Surface(fundo.get_size())
 background = background.convert()
 
-
 terra_o = pygame.image.load(r'Jogos\Newton\Terra.png').convert_alpha()
 terra = pygame.transform.scale(terra_o, (planeta*2,planeta*2))
 planeta = terra.get_rect().center[0]
