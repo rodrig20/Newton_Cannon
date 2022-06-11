@@ -105,7 +105,6 @@ while run:
             run = False
         if event.type == pygame.MOUSEWHEEL:
             zoom += event.y * 0.008
-
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 run = False
