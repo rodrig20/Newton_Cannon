@@ -180,6 +180,7 @@ while run:
             if star[0] < 0:
                 star[0] = lar
                 star[1] = random.randint(0, alt)
+                
     fundo.blit(background, (0,0))
     vecx += vectorx
     vecy += vectory
