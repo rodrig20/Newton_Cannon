@@ -225,8 +225,8 @@ while run:
     py += vy   
 
     fundo.blit(terra,((mx*zoom)-(planeta*zoom),(my*zoom)-(planeta*zoom)))
-    
     d = hypot(px-mx,py-my)
+    
     if start == 1:
         forca = gravitação(d)
 
