@@ -23,16 +23,6 @@ terra_o = pygame.image.load(r'Jogos\Newton\Terra.png').convert_alpha()
 terra = pygame.transform.scale(terra_o, (planeta*2,planeta*2))
 planeta = terra.get_rect().center[0]
 
-def texto(v,a):
-    texto1 = font.render(f'Velocidade Inicial: {v}',True,(245,66,66))
-    fundo.blit(texto1,(0+5,30))
-    texto1 = font.render(f'Altura Inicial: {a}',True,(245,66,66))
-    fundo.blit(texto1,(0+5,0+5))
-
-def gravitação(distancia):
-    f = (6.67*(10**-11))*((5.972*(10**14)*m))/(distancia*distancia)
-
-    return f
 
 def acel(total_f,distancia,x1,x2):
     global mx, my, px, py
@@ -284,6 +274,16 @@ while run:
 
         angle_1 = 90
         angle_2 = 0
+def texto(v,a):
+    texto1 = font.render(f'Velocidade Inicial: {v}',True,(245,66,66))
+    fundo.blit(texto1,(0+5,30))
+    texto1 = font.render(f'Altura Inicial: {a}',True,(245,66,66))
+    fundo.blit(texto1,(0+5,0+5))
+
+def gravitação(distancia):
+    f = (6.67*(10**-11))*((5.972*(10**14)*m))/(distancia*distancia)
+
+    return f
 
         pontos = []
 
@@ -293,6 +293,5 @@ while run:
         continue
     
     texto(vi,-ai)
-
     pygame.display.update()
     rel.tick(50)
