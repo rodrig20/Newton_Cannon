@@ -31,7 +31,6 @@ def texto(v,a):
 
 def gravitação(distancia):
     f = (6.67*(10**-11))*((5.972*(10**14)*m))/(distancia*distancia)
-
     return f
 
 def acel(total_f,distancia,x1,x2):
