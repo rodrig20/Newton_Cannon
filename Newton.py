@@ -64,12 +64,8 @@ mx, my = lar/2,alt/2
 project_pos = (lar/2,chao)
 px,py = project_pos
 
-
 ns = 300
-stars = [
-		[random.randint(0, lar),random.randint(0, alt)]
-		for x in range(ns)
-	]
+stars = [[random.randint(0, lar),random.randint(0, alt)]for x in range(ns)]
 
 estrelas = False
 line = True
@@ -89,8 +85,6 @@ vecx = 0
 vecy = 0
 scroll = 15
 z = 0
-
-
  
 p = 1
 sim = 0
@@ -178,8 +172,6 @@ while run:
             if event.key == pygame.K_n:
                 z -= 0.01
 
-    
-
     background.fill((0,0,0))
     fundo.fill((0,0,0))
     for star in stars:
@@ -191,7 +183,6 @@ while run:
                 star[0] = lar
                 star[1] = random.randint(0, alt)
     fundo.blit(background, (0,0))
-
     vecx += vectorx
     vecy += vectory
     mx += vx
@@ -201,7 +192,6 @@ while run:
         zoom = tmp_z
     if tmp_z != zoom:
         terra = pygame.transform.scale(terra_o, (planeta*2*zoom,planeta*2*zoom))
-
 
     vi = round(vi,2)
 
@@ -218,7 +208,7 @@ while run:
         if sim == 99:
             sim = 100
             pontos.append([px,py])
-        
+     
         t = 0
         for ponto in pontos:
             if t == 0:
@@ -233,11 +223,9 @@ while run:
             ly = ponto[1]
 
     px += vx
-    py += vy
-        
+    py += vy   
 
     fundo.blit(terra,((mx*zoom)-(planeta*zoom),(my*zoom)-(planeta*zoom)))
-    #pygame.draw.circle(fundo,(0,0,250), ((mx*zoom),my*zoom), planeta*zoom)
     
     d = hypot(px-mx,py-my)
     if start == 1:
@@ -249,8 +237,7 @@ while run:
 
         acelx = ax/m
         acely = ay/m
-        
-        
+              
         velx += acelx
         vely += acely
             
@@ -258,7 +245,6 @@ while run:
             velx = acelx = 0
             vely = acely = 0
             
-
         px += velx
         py += vely
 
@@ -275,7 +261,6 @@ while run:
                     py += 1
                     if d <= planeta + tam: 
                         break
-
 
         pygame.draw.circle(fundo,(100,100,100), (px*zoom,py*zoom), tam*zoom)
     
