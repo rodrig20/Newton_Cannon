@@ -246,8 +246,8 @@ while run:
             
         px += velx
         py += vely
-
         d = hypot(px-mx,py-my)
+        
         if d <= planeta + tam:
             px -= velx
             py -= vely
